@@ -203,6 +203,13 @@ module Telegram
       def action_for_callback_query
         [false, payload_type, [payload['data']]]
       end
+  
+      def action_for_pre_checkout_query
+        [false, payload_type, [payload['pre_checkout_query']]]
+      end
+    
+  
+
 
       # Silently ignore unsupported messages.
       # Params are `action, *args`.
