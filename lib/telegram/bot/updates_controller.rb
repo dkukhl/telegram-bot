@@ -86,6 +86,7 @@ module Telegram
         inline_query
         chosen_inline_result
         callback_query
+        pre_checkout_query
       ).freeze
       CMD_REGEX = %r{\A/([a-z\d_]{,31})(@(\S+))?(\s|$)}i
       CONFLICT_CMD_REGEX = Regexp.new("^(#{PAYLOAD_TYPES.join('|')}|\\d)")
